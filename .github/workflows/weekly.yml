@@ -1,0 +1,33 @@
+name: WeeklyTasks
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Weekly Task Setup'
+        default: 'World'
+        required: true
+        type: string
+
+jobs:
+  create_issues:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Create SEO Keyword Research
+      uses: peter-evans/create-issue@v2.6.0
+      with:
+        title: SEO Keyword Research
+        assignees: JackiePengp
+        project: OP
+    - name: Create Blog Article 1
+      uses: peter-evans/create-issue@v2.6.0
+      with:
+        title: Blog Article
+        assignees: JackiePengp
+        project: OP
+    - name: Create Blog Article 2
+      uses: peter-evans/create-issue@v2.6.0
+      with:
+        title: Blog Article
+        assignees: ShortCipher5
+        project: OP
